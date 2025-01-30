@@ -8,19 +8,19 @@
   "theme_color": "#FF5733",
   "icons": [
     {
-      "src": "https://i.imgur.com/VpbOX0L.png",
+      "src": "https://i.imgur.com/GTi09Qc.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://i.imgur.com/VpbOX0L.png",
+      "src": "https://i.imgur.com/GTi09Qc.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "https://i.imgur.com/VpbOX0L.png",
+      "src": "https://i.imgur.com/GTi09Qc.png",
       "sizes": "1280x720",
       "type": "image/png",
       "platform": "desktop"
