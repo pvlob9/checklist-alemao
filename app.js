@@ -127,15 +127,36 @@ const photoCaption = document.getElementById('photoCaption');
 const addPhotoButton = document.getElementById('addPhotoButton');
 const photosContainer = document.getElementById('photosContainer');
 
+// Habilita ou desabilita o campo de texto baseado na escolha do usuário
+photoCaptionSelect.addEventListener('change', function () {
+    if (this.value === 'Outro') {
+        photoCaption.disabled = false; // Habilita o campo de texto
+        photoCaption.focus(); // Coloca o cursor no campo
+    } else {
+        photoCaption.disabled = true; // Desabilita o campo de texto
+        photoCaption.value = ''; // Limpa o campo
+    }
+});
+
 // Função para adicionar foto
 addPhotoButton.addEventListener('click', function () {
     const photoFile = photoInput.files[0];
-    const captionText = photoCaption.value.trim();
+    const selectedCaption = photoCaptionSelect.value;
+    const customCaption = photoCaption.value.trim();
 
-    if (photoFile && captionText) {
-        displayPhoto(photoFile, captionText);
+    let finalCaption = selectedCaption;
+
+    // Se o usuário escolheu "Outro" e digitou algo, usa o texto digitado
+    if (selectedCaption === 'Outro' && customCaption) {
+        finalCaption = customCaption;
+    }
+
+    if (photoFile && finalCaption) {
+        displayPhoto(photoFile, finalCaption);
         photoCaption.value = '';
+        photoCaptionSelect.value = ''; // Reseta o select
         photoInput.value = ''; 
+        photoCaption.disabled = true; // Desativa o campo de texto novamente
     } else {
         alert('Por favor, adicione uma foto e uma legenda.');
     }

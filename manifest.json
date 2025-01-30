@@ -1,15 +1,20 @@
 {
-  "name": "Checklist de Veículo",
+  "name": "Checklist Veicular",
   "short_name": "Checklist",
-  "description": "Checklist de veículos com fotos e observações.",
-  "start_url": "/",
+  "description": "Aplicativo de checklist veicular",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4CAF50",
+  "background_color": "#0f1012",
+  "theme_color": "#FF5733",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

@@ -314,3 +314,38 @@ select.custom-select:hover {
     margin-bottom: 5px;         /* Espaçamento entre os itens */
     margin-left: 15px
 }
+
+/* Estilo para o select (botão de legenda) */
+#photoCaptionSelect {
+    background-color: #0f1012; /* Cor de fundo escura */
+    color: white; /* Texto branco */
+    font-size: 14px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    padding: 12px; /* Espaçamento interno */
+    border: 2px transparent; /* Borda transparente */
+    border-radius: 8px; /* Bordas arredondadas */
+    appearance: none; /* Remove o estilo padrão do sistema */
+    -webkit-appearance: none; /* Para Safari */
+    -moz-appearance: none; /* Para Firefox */
+    width: 159px; /* Largura total */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Efeito ao passar o mouse */
+#photoCaptionSelect:hover {
+    background-color: #0f1012; /* Muda o fundo para amarelo */
+    color: white; /* Texto preto */
+}
+
+/* Estilo das opções dentro do select */
+#photoCaptionSelect option {
+    background-color: #0f1012; /* Fundo escuro */
+    color: white; /* Texto branco */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Destaca a opção selecionada */
+#photoCaptionSelect option:checked {
+    background-color: #FFCC00; /* Fundo amarelo */
+    color: black; /* Texto preto */
+}

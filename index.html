@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
+<script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker registrado!"))
+        .catch((error) => console.log("Erro ao registrar Service Worker:", error));
+    }
+  </script>
 <body>
     <div class="container">
         <img src="https://i.imgur.com/VpbOX0L.png"/> 
@@ -46,11 +53,27 @@
                 <!-- Área para as fotos inseridas -->
             </div>
 
-            <!-- Formulário para adicionar foto -->
-            <input type="file" id="photoInput" accept="image/*" capture="camera">
-            <input type="text" id="photoCaption" placeholder="Digite a legenda da foto">
-            <button id="addPhotoButton">Adicionar Foto</button>
-        </div>
+           <!-- Formulário para adicionar foto -->
+<input type="file" id="photoInput" accept="image/*" capture="camera">
+
+<!-- Seleção de respostas fixas -->
+<select id="photoCaptionSelect">
+    <option value="">Legenda</option>
+    <option value="Frente">Frente</option>
+    <option value="Traseira">Traseira</option>
+    <option value="Lateral Esquerda">Lateral Esquerda</option>
+    <option value="Lateral Direita">Lateral Direita</option>
+    <option value="Painel">Painel</option>
+    <option value="Outro">Outro (Digite abaixo)</option>
+</select>
+
+<!-- Campo de texto para digitar a legenda manualmente -->
+<input type="text" id="photoCaption" placeholder="Digite a legenda da foto" disabled>
+
+<button id="addPhotoButton">Adicionar Foto</button>
+
+<div id="photoGallery"></div>
+
 
         <!-- Peças Internas -->
         <div class="section">
