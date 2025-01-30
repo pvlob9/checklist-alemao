@@ -1,0 +1,316 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1012;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+img {
+    width: 100px;    /* Define a largura da imagem */
+    height: 100px;   /* Define a altura da imagem */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Seções */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #1C1D1F;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="range"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #0f1012;
+    color: #FFF;
+    background-color: #0f1012;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background: #0f1012;
+    color:#fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Fotos - Layout Detalhado */
+.photo-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0075FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFCC00;
+}
+
+#photos {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#photos img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Responsivo */
+@media (max-width: 768px) {
+    .section {
+        padding: 15px;
+    }
+
+    .photo-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #photos img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Seção de Observações */
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f1012;
+    margin-top: 10px;
+    border: 1px solid #0f1012;
+    border-radius: 5px;
+    height: 100px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cabeçalhos */
+h1, h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Assinatura Digital */
+.signature-section {
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#signatureCanvas {
+    border: 2px solid #0f1012;
+    width: 500%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* Botão para enviar pelo WhatsApp */
+#sendWhatsAppBtn {
+    background-color: #FFCC00;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#sendWhatsAppBtn:hover {
+    background-color: #128C7E;
+}
+
+/* Para navegadores baseados no WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra vertical */
+    height: 8px; /* Altura da barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #1C1D1F; /* Cor do fundo da barra */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f1012; /* Cor da barra de rolagem */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #128C7E; /* Cor ao passar o mouse */
+}
+/* Estilos para a seção de fotos */
+#photosContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+}
+
+#photosContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#photosContainer small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+}
+
+input[type="file"], input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px); /* Para ajustar com o padding */
+    box-sizing: border-box;
+}
+.photo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.delete-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+.delete-button:hover {
+    background-color: transparent;
+}
+
+/* Estilo para o <select> */
+select.custom-select {
+    background-color: #0f1012; /* Cor de fundo */
+    border: 2px solid transparent;    /* Cor da borda */
+    border-radius: 9px;        /* Bordas arredondadas */
+    padding: 12px 8px;         /* Espaçamento interno */
+    font-size: 12px;           /* Tamanho da fonte */
+    color: white;               /* Cor da fonte */
+    cursor: pointer;          /* Cursor de ponteiro */
+    appearance: none;          /* Remove a aparência padrão do select */
+    -webkit-appearance: none;  /* Para Safari */
+    -moz-appearance: none;     /* Para Firefox */
+}
+
+/* Estilo para o <select> ao focar */
+select.custom-select:focus {
+    border-color: #FFCC00; /* Cor da borda ao focar */
+    outline: none;         /* Remove o contorno padrão */
+}
+
+/* Estilo do botão de seta (a parte que fica à direita do select) */
+select.custom-select::-ms-expand {
+    display: none;         /* Esconde a seta no IE */
+}
+
+/* Estilo para a caixa de opções */
+option {
+    background-color: #0f1012; /* Cor de fundo das opções */
+    color: #fff;            /* Cor da fonte das opções */
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 8px;           /* Espaçamento interno */
+}
+
+/* Estilo para a opção selecionada */
+option:checked {
+    background-color: #1C1D1F; /* Cor de fundo da opção selecionada */
+    color: white;              /* Cor da fonte da opção selecionada */
+}
+
+/* Estilo adicional: Filtro de foco em opções */
+select.custom-select:hover {
+    background-color: #1C1D1F; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estiliza os itens da lista de peças internas */
+#internalParts li {
+    font-weight: bold;          /* Deixa o texto em negrito */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Altera a fonte */
+    font-size: 16px;            /* Ajusta o tamanho da fonte */
+    color: #fff;                /* Define uma cor para o texto */
+    margin-bottom: 5px;         /* Espaçamento entre os itens */
+    margin-left: 15px
+}

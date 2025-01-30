@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Veículo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/VpbOX0L.png"/> 
+        <h1>Checklist de Veículo</h1>
+
+        <!-- Informações do Veículo -->
+        <div class="section">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu Nome">
+            <label for="os">O.S:</label>
+            <input type="text" id="os" placeholder="Número da O.S">
+            <label for="cliente">Cliente:</label>
+            <input type="text" id="cliente" placeholder="Nome do Cliente">
+            <label for="data">Data:</label>
+            <input type="text" id="data" value="" disabled>
+        </div>
+
+        <!-- Informações do Veículo -->
+        <div class="section">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca">
+            
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo">
+            
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa">
+            
+            <label for="quilometragem">Quilometragem:</label>
+            <input type="number" id="quilometragem">
+        </div>
+
+        <!-- FOTOS DETALHES -->
+        <div class="section">
+            <h3>FOTOS</h3>
+            <div id="photosContainer">
+                <!-- Área para as fotos inseridas -->
+            </div>
+
+            <!-- Formulário para adicionar foto -->
+            <input type="file" id="photoInput" accept="image/*" capture="camera">
+            <input type="text" id="photoCaption" placeholder="Digite a legenda da foto">
+            <button id="addPhotoButton">Adicionar Foto</button>
+        </div>
+
+        <!-- Peças Internas -->
+        <div class="section">
+            <h3>Peças Internas</h3>
+            <ul id="internalParts">
+                <!-- As perguntas serão geradas aqui -->
+            </ul>
+        </div>
+
+        <!-- Observações -->
+        <div class="section">
+            <label for="observacao">Observações:</label>
+            <textarea id="observacao" placeholder="Alguma observação?..."></textarea>
+        </div>
+
+        <!-- Assinatura -->
+        <div class="section">
+            <h3>Assinatura</h3>
+            <label for="assinatura">Assine aqui:</label>
+            <canvas id="signaturePad" width="500" height="200"></canvas>
+            <p>Declaro estar ciente dos defeitos já existentes e apontados nessa vistoria.</p>
+            <button id="clearSignature">Limpar</button>
+        </div>
+
+        <button id="submitBtn">Salvar Fotos</button>
+        <button onclick="baixarChecklistComoHTML()">Baixar Checklist</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
